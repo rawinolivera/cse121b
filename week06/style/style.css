@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 3rem;
+}
+
+header {
+    background-color: antiquewhite;
+    padding: 1rem 0;
+}
+
+.down {
+    margin: 0;
+    padding: 1rem 0;
+}
+
+footer {
+    background-color: antiquewhite;
+    margin: 0;
+}
+
+#space {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+div {
+    border: solid 2.5px;
+}

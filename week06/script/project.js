@@ -1,3 +1,4 @@
+document.querySelector("#year").textContent = new Date().getFullYear();
 
 let movieList = [];
 
@@ -16,23 +17,24 @@ function displayMovies(movieList){
         frame.appendChild(moviePoster);
         frame.appendChild(movieYear);
         document.querySelector("#space").appendChild(frame);
-        console.log("pasando");
     });
     
 }
 
-async function getMovieList(){
+async function getMovies(){
 
     const moviesUrl = "https://rawinolivera.github.io/cse121b/data/movies.json";
     const response = await fetch(moviesUrl);
 
     if(response.ok){
         const data = await response.json();
-        movieList = data;
+        movieList = data.sort(function() {
+            return 0.4 - Math.random();
+        });      
     }
 
-    displayMovies(movieList);
-    console.log("aqui estoy");
+    displayMovies(movieList.slice(0,12));
+    
 }
 
-getMovieList();
+getMovies();
